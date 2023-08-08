@@ -47,3 +47,6 @@ selenium java , webdrivermanager , cucumber java , Cucumber junit   bulunur ve k
 
 13- Eger API testi yapilacaksa baska dependency ler eklenebilir. Kullanilacak Api a gore rest assured veya baska dependenciy ler kullanilabilir.
     Ayrica API testi icin utilities package i altina ObjectMapperUtils  class i Authentication class i ve ApiBaseUrl class i eklenebilir.
+
+14- resources'a sag tiklayarak new file ile cucumber.properties dosyasını olusturuyoruz.
+    (guvenli raporlama ve konsolda rapor adresimizi daha net gorebilmek icin)
