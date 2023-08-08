@@ -1,0 +1,49 @@
+1- Create Project --> File --> New --> Project --> selectMaven    Name: cucumberProject
+
+2- Add Dependencies --> pom.xml <dependencies tagi acilir ve 2 dependencies tagi arasina https://mvnrepository.com/ adresinden
+selenium java , webdrivermanager , cucumber java , Cucumber junit   bulunur ve kopyalanip eklenir.
+
+3- Click Maven --> click 'Enable auto - reload after any changes ' Reload.
+   Maven (maviok simgeli) tiklandiginda yuklemeleri yapiyor.
+
+4- Test package i altindaki java ya sag click yaparak asagidaki package lari olusturalim;
+
+    a- utilities
+    b- pages
+    c- runners  (Test case leri calistirmak ve kontrol etmek icin kullanacagiz)
+    d- stepDefinitions  (Kodlarimizi burada olusturacagiz)
+    e- pojos (api testi yapilacaksa)
+
+5- Utilities package i altinda Driver ve ConfigReader class larimizi olusturalim.
+
+6- Proje adinin ustune sag click yapip cofiguration.properties  (.properties uzantili)  dosya  (new file)  olusturalim.
+
+7- test package i altinda yeni bir klasor olusturalim. test - sag click - new - Directory ----> resources (adinda)
+
+8- resources klasoru altinda yeni bir klasor olusturalim. resources - sag click - new - directory - features (adinda)
+   Java kodu icermeyen dosyalari buraya yazacagiz.
+
+9- features a sag click yaparak dosya olusturuyoruz. (adi testimizin adi olabilir.) features - sag click - new - file - search.feature
+
+10- Cucumber for Java plugin ini intellije ekleyelim: File - Settings - / Plugins)
+    Cucumber for java yazarak aratip ekliyoruz.
+
+11- stepDefinitions package i altina Hooks class i eklenir. Hooks class i;
+
+     /*
+       Cucumber'da Step definitions package'i icerisinde
+       @before,@after gibi bir notasyon varsa
+        extends testBase dememeize gerek kalmadan
+        her scenario'dan once veya sonra bu methodlar calisacaktir
+        Cucumber'da @before,@after kullanma ihtiyacimiz olursa
+        bunu step definitions package'i altinda olusturacagimiz
+        Hooks class'ina koyariz
+        Biz her scenario;dan sonra test sonucunu kontrol edip
+        failed olan scenario icin screenshoot almasi amaciyla
+        @After method'u kullanacagiz
+         */
+
+12- Rapor icin Cucumber Report Plugin i eklenir. (pom.xml de eklidir)
+
+13- Eger API testi yapilacaksa baska dependency ler eklenebilir. Kullanilacak Api a gore rest assured veya baska dependenciy ler kullanilabilir.
+    Ayrica API testi icin utilities package i altina ObjectMapperUtils  class i Authentication class i ve ApiBaseUrl class i eklenebilir.
